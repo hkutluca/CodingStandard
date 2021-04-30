@@ -372,20 +372,6 @@ for (int i = 0; i < static_cast<int>(mActiveCalls.size()); ++i)
 ```
 
 
-#### Special Considerations for API
-1. The API consists, with very few exceptions, of methodless structs and pure virtual interface classes.
-2. API class methods should be either virtual or inline.
-3. The API does not use  integral types with platform-dependent sizes, other than `int`, `unsigned`, and `bool`.   `size_t` should be used only for sizes of memory buffers.
-4. The API does not use any aggregate types (e.g. `std::string`) which may be compiled differently with different compilers and libraries.
-5. The API minimizes dependencies on system headers - currently only `<cstddef>` and `<cstdint>`.
-6. Memory ownership may not be transferred across API boundaries - any memory allocated inside a library must be freed inside the library.
-7. The API should be C++03.
-8. New methods should be added at the end of interfaces so as to preserve v-table compatibility (compilers don't guarantee this, but de facto it works.)
-9. Avoid optional arguments to functions, since they can make it difficult to extend interfaces.
-10. Do not throw exceptions across library boundaries.
-11. Document all APIs with doxygen.
-
-
 #### Common Pitfalls
 
 1. C headers should not be used directly.
