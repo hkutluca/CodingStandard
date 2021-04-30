@@ -1,35 +1,5 @@
 ---
-# Configure clang-tidy for this project.
 
-# Here is an explanation for why some of the checks are disabled:
-#
-#  -google-readability-namespace-comments: the *_CLIENT_NS is a macro, and
-#      clang-tidy fails to match it against the initial value.
-#
-#  -modernize-use-trailing-return-type: clang-tidy recommends using
-#      `auto Foo() -> std::string { return ...; }`, we think the code is less
-#      readable in this form.
-#
-#  -modernize-return-braced-init-list: We think removing typenames and using
-#      only braced-init can hurt readability.
-#
-#  -modernize-avoid-c-arrays: We only use C arrays when they seem to be the
-#      right tool for the job, such as `char foo[] = "hello"`. In these cases,
-#      avoiding C arrays often makes the code less readable, and std::array is
-#      not a drop-in replacement because it doesn't deduce the size.
-#
-#  -performance-move-const-arg: This warning requires the developer to
-#      know/care more about the implementation details of types/functions than
-#      should be necessary. For example, `A a; F(std::move(a));` will trigger a
-#      warning IFF `A` is a trivial type (and therefore the move is
-#      meaningless). It would also warn if `F` accepts by `const&`, which is
-#      another detail that the caller need not care about.
-#
-#  -readability-redundant-declaration: A friend declaration inside a class
-#      counts as a declaration, so if we also declare that friend outside the
-#      class in order to document it as part of the public API, that will
-#      trigger a redundant declaration warning from this check.
-#
 Checks: >
   -*,
   bugprone-*,
@@ -53,7 +23,7 @@ Checks: >
   -readability-redundant-declaration
 
 # Turn all the warnings from the checks above into errors.
-WarningsAsErrors: "*"
+# WarningsAsErrors: "*"
 
 HeaderFilterRegex: "(google/cloud/|generator/).*\\.h$"
 
@@ -63,9 +33,9 @@ CheckOptions:
   - { key: readability-identifier-naming.StructCase,             value: CamelCase  }
   - { key: readability-identifier-naming.TemplateParameterCase,  value: CamelCase  }
   - { key: readability-identifier-naming.FunctionCase,           value: camelBack  }
-  - { key: readability-identifier-naming.VariableCase,           value: lower_case }
+  - { key: readability-identifier-naming.VariableCase,           value: camelBack }
   - { key: readability-identifier-naming.ClassMemberCase,        value: CamelCase }
-  - { key: readability-identifier-naming.ClassMethodCase,        value: lower_case }
+  - { key: readability-identifier-naming.ClassMethodCase,        value: camelBack }
   - { key: readability-identifier-naming.ClassMemberPrefix,      value: m          }
   - { key: readability-identifier-naming.EnumConstantCase,         value: CamelCase }
   - { key: readability-identifier-naming.EnumConstantPrefix,       value: k         }
@@ -74,6 +44,8 @@ CheckOptions:
   - { key: readability-identifier-naming.GlobalConstantCase,       value: CamelCase }
   - { key: readability-identifier-naming.GlobalConstantPrefix,     value: k         }
   - { key: readability-identifier-naming.MemberConstantCase,       value: CamelCase }
+  - { key: readability-identifier-naming.PrivateMemberCase,       value: camelBack }
+  - { key: readability-identifier-naming.PrivateMemberPrefix,       value: "m" }
   - { key: readability-identifier-naming.MemberConstantPrefix,     value: k         }
   - { key: readability-identifier-naming.StaticConstantCase,       value: CamelCase }
   - { key: readability-identifier-naming.StaticConstantPrefix,     value: k         }
