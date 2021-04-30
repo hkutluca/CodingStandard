@@ -1,14 +1,14 @@
-# CodingStandard
+# Coding Standard for the Project
 
-##  C++ Coding Guidelines
+##  C++ Style Guide:
 
-###  C++ Style Guide:
-
- Style guide is derived from google C++ Style Guide. Bu rules are changed as seen below. .clang-format  file shall be used wıth Visual studio code to highlight and correct style problems. It is highly recomended that Software Engineers reads  Clean Code book from Robert C. Martin or watch videos of Clean Code from youtube (https://www.youtube.com/watch?v=7EmboKQH8lM&t=3325s) or from many available sources from internet.
+Style guide defines rules such as variable and class naming, braces and tab rules etc. Style guide is derived from Google C++ Style Guide for th eproject. Bu rules are changed as seen below. .clang-format  file shall be used wıth Visual studio code to highlight and correct style problems.
 - [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
+
+It is highly recomended that Software Engineers reads  Clean Code book from Robert C. Martin or watch videos of Clean Code from youtube (https://www.youtube.com/watch?v=7EmboKQH8lM&t=3325s) or from many available sources from internet.
 - [Clean Code book from Robert C. Martin] https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
 
-###  Developing Robust C++ Code:
+##  Developing Robust C++ Code:
 
 Roughly 80% of software defects when using the C or C++ language, are attributable to the incorrect usage of 20% of the language constructs. If the usage of the language can be restricted to avoid this subset that is known to be problematic, then the quality of the ensuing software is going to greatly increase. If you don’t want defects in your code, then don’t put them there!
 
