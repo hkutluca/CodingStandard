@@ -393,26 +393,4 @@ char const * const errStr = getErrorStr(status);
 
 ----
 
-## Appendix
 
-####  Abbreviation Words and Compound Words as Part of Names
-
-* Abbreviation words, which are usually fully-capitalized in literature, are treated as normal words without special capitalization, e.g. `gpuAllocator`, where GPU is converted to `gpu` before constructing the camel case name.
-* Compound words, which are usually used in full in literature, e.g. `runtime`, can be abbreviated into fully capitalized letters, e.g. `RT` in NvInferRT.h.
-
-####  Terminology
-
-* *CUDA code* is code that must be compiled with a CUDA compiler. Typically, it includes:
-   * Declaration or definition of global or static variables with one of the following CUDA keywords: `__device__`, `__managed__` and `__constant__`.
-   * Declaration or definition of device functions decorated with `__device__`.
-   * Declaration or definition of kernels decorated with `__global__`.
-   * Kernel launching with <<<...>>> syntax.
-
-> NOTE:
-   * Definition of kernel function pointer type aliases is not device code, e.g. `typedef __global__ void(*KernelFunc)(void* /*arg*/);`.
-   * Definition of pointers to kernel functions is not device code, either, e.g. `__global__ void(*KernelFunc)(void* /*arg*/) = getKernelFunc(parameters);` .
-   * Kernel launching with the CUDA runtime/driver API's, e.g. `cuLaunch` and `cudaLaunch`, is not CUDA code.
-
-----
-
-##
