@@ -2,11 +2,16 @@
 
 ##  C++ Coding Guidelines
 
-The  C++ Coding Guidelines are derived from several sources, primarily:
+###  C++ Style Guide:
 
+ Style guide is derived from google C++ Style Guide. Bu rules are changed as seen below. .clang-format  file shall be used wıth Visual studio code to highlight and correct style problems. It is highly recomended that Software Engineers reads  Clean Code book from Robert C. Martin or watch videos of Clean Code from youtube (https://www.youtube.com/watch?v=7EmboKQH8lM&t=3325s) or from many available sources from internet.
+- [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
+- [Clean Code book from Robert C. Martin] https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
+
+###  Developing Robust C++ Code:
+Industry 
 - [AUTOSAR C++ 2014](https://www.autosar.org/fileadmin/user_upload/standards/adaptive/17-03/AUTOSAR_RS_CPP14Guidelines.pdf)
 - [MISRA C++ 2008](https://www.misra.org.uk/Activities/MISRAC/tabid/171/Default.aspx)
-- [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
 
 ------
 
