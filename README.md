@@ -9,9 +9,28 @@
 - [Clean Code book from Robert C. Martin] https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
 
 ###  Developing Robust C++ Code:
-Industry 
-- [AUTOSAR C++ 2014](https://www.autosar.org/fileadmin/user_upload/standards/adaptive/17-03/AUTOSAR_RS_CPP14Guidelines.pdf)
+
+Roughly 80% of software defects when using the C or C++ language, are attributable to the incorrect usage of 20% of the language constructs. If the usage of the language can be restricted to avoid this subset that is known to be problematic, then the quality of the ensuing software is going to greatly increase. If you don’t want defects in your code, then don’t put them there!
+
+To avoid undefined behaviour
+-e.g. for C and C++, dividing by zero or dereferencing a NULL pointer
+the language reference provides no definition of what behaviour to expect
+To avoid implementation defined behaviour
+-e.g. the size of an integer
+-The compiler developer must document the decision taken
+-Leads to un-portable code
+- May mislead a programmer moving to a different programming environment
+To improve clarity for review and maintenance.
+-e.g not allowing 'count1' and 'countl' as variable names in the same program objective issue and solution
+To provide a consistent style across a program or set of programs
+-e.g. name format (Hungarian notation etc) or code layout similar to improving clarity - but subjective
+
+There are several coding guidelines that propose using subsets of th language. MISRA C++ 2008 standard is most common such guideline. However it is based on C++98 rules. Later AUTOSAR C++2014 guideline is published to include C++11 and C++14 rules.
+We strongly recomend engineers have a look to these guidelines and obey the rules as much as possible. We will setup tool support for these rules ın near feuture. 
+Selected important rules are given below. 
+
 - [MISRA C++ 2008](https://www.misra.org.uk/Activities/MISRAC/tabid/171/Default.aspx)
+- [AUTOSAR C++ 2014](https://www.autosar.org/fileadmin/user_upload/standards/adaptive/17-03/AUTOSAR_RS_CPP14Guidelines.pdf)
 
 ------
 
