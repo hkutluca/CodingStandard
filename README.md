@@ -25,12 +25,9 @@ To improve clarity for review and maintenance.
 To provide a consistent style across a program or set of programs
 -e.g. name format (Hungarian notation etc) or code layout similar to improving clarity - but subjective
 
-There are several coding guidelines that propose using subsets of th language. MISRA C++ 2008 standard is most common such guideline. However it is based on C++98 rules. Later AUTOSAR C++2014 guideline is published to include C++11 and C++14 rules.
+There are several coding guidelines that propose using subsets of th language. MISRA C++ 2008 standard is most common such guideline. However it is based on C++98 rules. Later AUTOSAR C++2014 guideline is published to include C++11 and C++14 rules. Both guidelines are provided in github.
 We strongly recomend engineers have a look to these guidelines and obey the rules as much as possible. We will setup tool support for these rules ın near feuture. 
 Selected important rules are given below. 
-
-- [MISRA C++ 2008]
-- [AUTOSAR C++ 2014]
 
 ------
 
