@@ -2,7 +2,7 @@
 
 ##  C++ Style Guide:
 
-Style guide defines rules such as variable and class naming, braces and tab rules etc. Style guide is derived from Google C++ Style Guide for th eproject. Bu rules are changed as seen below. .clang-format  file shall be used wıth Visual studio code to highlight and correct style problems.
+Style guide defines rules such as variable and class naming, braces and tab rules etc. Style guide is derived from Google C++ Style Guide for th eproject. Bu rules are changed as seen below. Install llvm-vs-code-extensions.vscode-clangd then use .clang-format  and .clang-tidys files to highlight and correct style problems.
 - [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
 
 It is highly recomended that Software Engineers reads  Clean Code book from Robert C. Martin or watch videos of Clean Code from youtube (https://www.youtube.com/watch?v=7EmboKQH8lM&t=3325s) or from many available sources from internet.
