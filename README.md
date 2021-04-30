@@ -29,7 +29,7 @@ There are several coding guidelines that propose using subsets of th language. M
 We strongly recomend engineers have a look to these guidelines and obey the rules as much as possible. We will setup tool support for these rules ın near feuture. 
 Selected important rules are given below. 
 
-- [MISRA C++ 2008](https://www.misra.org.uk/Activities/MISRAC/tabid/171/Default.aspx)
+- [MISRA C++ 2008](http://www.tlemp.com/download/rule/MISRA-CPP-2008-STANDARD.pdfx)
 - [AUTOSAR C++ 2014](https://www.autosar.org/fileadmin/user_upload/standards/adaptive/17-03/AUTOSAR_RS_CPP14Guidelines.pdf)
 
 ------
