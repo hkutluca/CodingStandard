@@ -2,7 +2,7 @@
 
 ##  C++ Style Guide:
 
-Style guide defines rules such as variable and class naming, braces and tab rules etc. Style guide is derived similar to webkit style. But rules are changed as seen below. Install llvm-vs-code-extensions.vscode-clangd then use .clang-format  and .clang-tidys files to highlight and correct style problems.
+Style guide defines rules such as variable and class naming, braces and tab rules etc. Style guide is derived similar to WebKit style. But rules are changed as seen below. Install llvm-vs-code-extensions.vscode-clangd then use .clang-format  and .clang-tidys files to highlight and correct style problems.
 if you cannot see all warnings in your editor pleas euse command line. 
 
 Use:
