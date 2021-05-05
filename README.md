@@ -86,7 +86,7 @@ if (nbInputs == kNbInputsWBias) {/*...*/}
 
 #### Naming
 1. Filenames
-   * Camel case with first letter lowercase: `thisIsASubDir` and `thisIsAFilename.cpp`
+   * All first letters are uppercase: `ThisIsASubDir` and `ThisIsAFilename.cpp`
    * *NOTE*: All files involved in the compilation of a compilation target (.exe/.so) must have filenames that are case-insensitive unique.
 
 2. Types
