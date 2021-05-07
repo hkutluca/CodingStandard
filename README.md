@@ -85,14 +85,14 @@ if (nbInputs == kNbInputsWBias) {/*...*/}
 
 
 #### Naming
-1. Filenames
+1. Filenames, 
    * All first letters are uppercase: `ThisIsASubDir` and `ThisIsAFilename.cpp`
    * *NOTE*: All files involved in the compilation of a compilation target (.exe/.so) must have filenames that are case-insensitive unique.
 
-2. Types
+2. Types  and  methods
    * All types (including, but not limited to, class names) are [camel case](https://en.wikipedia.org/wiki/Camel_case) with uppercase first letter. Example: `FooBarClass`
 
-3. Local variables, methods and namespaces
+3. Local variables,  namespaces
    * Camel case with first letter lowercase. Example: `localFooBar`
 
 4. Non-magic-number global variables that are non-static and not defined in anonymous namespace
@@ -105,7 +105,7 @@ if (nbInputs == kNbInputsWBias) {/*...*/}
    * Camel case with lowercase prefix ''s" as the first letter of the name. Example: `static std::once_flag sCaskInitOnce;`
 
 7. Public, private and protected class member variables
-   * Camelcase prefixed with an 'm': `mNbFooValues`.
+   * Camel case with first letter lowercase prefixed with an 'm_': `m_nbFooValues`.
    * Public member variables do not require the 'm' prefix but it is highly encouraged to use the prefix when needed to improve code clarity, especially in cases where the class is a base class in an inheritance chain.
 
 8. Constants
@@ -352,15 +352,15 @@ void foo();
 
 4. Do not use `#pragma` once as include guard.
 5. Use a preprocessor guard. It's standard-conforming and modern compilers are smart enough to open the file only once.
-   * The guard name must have prefix `TRT_` followed by the filename, all in caps. For a header file named `FooBarHello.h`, name the symbol as `TRT_FOO_BAR_HELLO_H`.
+   * The guard name must have prefix `TRT_` followed by the filename, all in caps. For a header file named `FooBarHello.h`, name the symbol as `FOO_BAR_HELLO_H`.
    * Only use the file name to create the symbol. Unlike the Google C++ guideline, we do not include the directory names in the symbol. This is because we ensure all filenames are unique in the compilation unit.
    * Do not use prefix with underscore. Such symbols are reserved in C++ standard for compilers or implementation.
-   * Do not use trailing underscore for the symbol. We differ in this from Google C++ guideline, which uses trailing underscore: `TRT_FOO_BAR_HELLO_H_`
+   * Do not use trailing underscore for the symbol. We differ in this from Google C++ guideline, which uses trailing underscore: `FOO_BAR_HELLO_H_`
 ```cpp
-#ifndef TRT_FOO_BAR_HELLO_H
-#define TRT_FOO_BAR_HELLO_H
+#ifndef FOO_BAR_HELLO_H
+#define FOO_BAR_HELLO_H
 // ...
-#endif // TRT_FOO_BAR_HELLO_H
+#endif // FOO_BAR_HELLO_H
 ```
 
 6. *AUTOSAR C++ 2014: 7-1-6*
@@ -388,7 +388,7 @@ for (int i = 0; i < static_cast<int>(mActiveCalls.size()); ++i)
    * Use brace initialization or `std::fill_n()` instead of `memset()`. This is especially important when dealing with non-[POD types](http://en.cppreference.com/w/cpp/concept/PODType). In the example below, using `memset()` will corrupt the vtable of `Foo:`
 ```cpp
 struct Foo {
-    virtual int getX() { return x; }
+    virtual int GetX() { return x; }
     int x;
 };
 ...
